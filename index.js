@@ -607,11 +607,11 @@ app.get('/api/bills', async (req, res) => {
   try {
     await ensureDb();
     await detectStructuredColumn();
-    app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
+  app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
   } catch (err) {
     console.error('Initialization encountered issues:', err);
     // Start server anyway; routes may error if DB is unreachable
-    app.listen(PORT, () => console.log(`Backend running on port ${PORT} (degraded DB init)`));
+  app.listen(PORT, () => console.log(`Backend running on port ${PORT} (degraded DB init)`));
   }
 })();
 
