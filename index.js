@@ -321,7 +321,7 @@ async function detectStructuredColumn() {
 }
 
 // (removed duplicate)
-const PORT = process.env.PORT || 10000;
+const PORT = Number(process.env.PORT) || 10000;
 
 // JWT middleware
 function authRequired(req, res, next) {
